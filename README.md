@@ -24,3 +24,7 @@ chown -R Chat:Chat /volume1/@appstore/Chat/ui/images/theme/1x
 chown -R Chat:Chat /volume1/@appstore/Chat/ui/images/theme/2x
 ```
 4) Restarted desktop application. For a browser needed to clean a cache to started to show new wallpaper.
+
+Result:
+
+![](example/example_light.png) ![](example/example_dark.png)
