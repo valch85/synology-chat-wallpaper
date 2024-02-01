@@ -1,28 +1,26 @@
 # synology-chat-wallpaper
-some infor about change backgroud wallpaper of the Synology Chat
+**Some information about changing backgroud wallpaper of the Synology Chat**
 
-SSH to the NAS and under sudo search for the location of the files (before that, I checked what is the file name via developers tools in firefox loaded for the wallpaper). For me, it was wallpaper_dark_01.jpg.
+*I have tried to add new wallpapers, but it has not worked for me (only a list of 4 shows), so changeed the existing ones.*
 
-find / -name wallpaper_dark_01.jp
+1) SSH to the NAS and under sudo search for the location of the files (before that, I checked what is the file name via developers tools in firefox loaded for the wallpaper). For me, it was wallpaper_dark_01.jpg.
 
-I've got such a response:
+`find / -name wallpaper_dark_01.jpg`
 
+Response:
+
+```
 /volume1/@appstore/Chat/ui/images/theme/2x/wallpaper_dark_01.jpg
-
 /volume1/@appstore/Chat/ui/images/theme/1x/wallpaper_dark_01.jpg
+```
 
-Have tried to add new wallpapers but it is not worked for me so I decided to change exist.
+2) Copy, with replacement, new files for the wallpaper_dark_01.jpg & thumbnail_dark_01.jpg on both directories (1x & 2x).
 
-I copied, with replace, new files for the wallpaper_dark_01.jpg & thumbnail_dark_01.jpg on both directories.
-
-Change owner and permissions to a proper one
-
+3) Change owner and permissions to a proper one:
+```
 chmod -R 755 /volume1/@appstore/Chat/ui/images/theme/1x
-
 chmod -R 755 /volume1/@appstore/Chat/ui/images/theme/2x
-
 chown -R Chat:Chat /volume1/@appstore/Chat/ui/images/theme/1x
-
 chown -R Chat:Chat /volume1/@appstore/Chat/ui/images/theme/2x
-
-Restarted desktop application. For a browser, I needed to clean a cache that it started to show new wallpaper.
+```
+4) Restarted desktop application. For a browser needed to clean a cache to started to show new wallpaper.
