@@ -27,4 +27,4 @@ chown -R Chat:Chat /volume1/@appstore/Chat/ui/images/theme/2x
 
 Result:
 
-![](example/example_light.png) ![](example/example_dark.png)
+![](example/example_dark_light.png)
