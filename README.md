@@ -28,3 +28,8 @@ chown -R Chat:Chat /volume1/@appstore/Chat/ui/images/theme/2x
 Result:
 
 ![](example/example_dark_light.png)
+
+Folders:
+- arch: archives with original images and that I have changed for backup purpouse
+- images: images that I use for backgroud with proper naming
+- examples: just to paste in README
